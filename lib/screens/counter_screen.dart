@@ -28,46 +28,47 @@ int counter=0;
       body:  Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: [ 
                 Text('Número de clicks', style: fontSize35),
                 Text('$counter', style: fontSize30)
             ],
           ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          FloatingActionButton(
-            backgroundColor: Colors.amber,
-            child: const Icon(Icons.exposure_minus_1),
-            onPressed: () {
-              counter--;
-              setState((){});
-            },
-            ),
+      floatingActionButton: const CustomFloatingActions(),
+    );
+  }
+}
 
-          FloatingActionButton(
-            backgroundColor: Colors.amber,
-            child: const Icon(Icons.exposure_zero),
-            onPressed: () {
-              counter=0;
-              setState((){});
-            },
-            ),
+class CustomFloatingActions extends StatelessWidget {
+  const CustomFloatingActions({
+    super.key,
+  });
 
-          FloatingActionButton(
-            backgroundColor: Colors.amber,
-            child: const Icon(Icons.plus_one),
-            onPressed: () {
-              counter++;
-              setState((){});
-            },
-            ),
-            
-        ],
-      ),
-        
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        FloatingActionButton(
+          backgroundColor: Colors.amber,
+          child: Icon(Icons.exposure_minus_1),
+          onPressed: null,
+        ),
+    
+        FloatingActionButton(
+          backgroundColor: Colors.amber,
+          child: Icon(Icons.exposure_zero),
+          onPressed: null,
+          ),
+    
+        FloatingActionButton(
+          backgroundColor: Colors.amber,
+          child: Icon(Icons.plus_one),
+          onPressed: null,
+          ),
+          
+      ],
     );
   }
 }

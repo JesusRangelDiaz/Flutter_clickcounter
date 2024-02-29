@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget{
     TextStyle fontSize35 = const TextStyle(fontSize: 35);
     TextStyle fontSize30 = const TextStyle(fontSize: 30);
 
-    return Scaffold(
+    return Scaffold( 
       appBar:AppBar(
         backgroundColor: Colors.blueAccent,
         elevation: 1,
