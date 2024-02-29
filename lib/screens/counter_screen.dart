@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget{
-  const HomeScreen({super.key});
+class CounterScreen extends StatelessWidget{
+  const CounterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,7 @@ class HomeScreen extends StatelessWidget{
       appBar:AppBar(
         backgroundColor: Colors.blueAccent,
         elevation: 1,
-        title:const Text('HomeScreen'),
-        
+        title:const Text('CounterScreen'),
       ) ,
       backgroundColor: Colors.greenAccent,
       body:  Center(
